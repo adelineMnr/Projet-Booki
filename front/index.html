@@ -5,22 +5,66 @@
     <meta charset="UTF-8"> <!--Pour afficher les accents et caractères spéciaux-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Permet au site d’être responsive-->
     <title>Booki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Pour dire au navigateur de se préparer à se connecter à Google Fonts avant de télécharger la police. Cela accélère le chargement des polices.-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Pour dire au navigateur de se préparer à se connecter à fonts.gstatic.com qui sert les fichiers réels des polices. crossorigin : nécessaire pour les polices, afin que le navigateur accepte de charger des ressources cross-origin.-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet"> <!--Pour mettre la police Raleway-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--Pour importer Font Awesome, une bibliothèque d’icônes. integrity : permet au navigateur de vérifier que le fichier n’a pas été modifié (sécurité). crossorigin="anonymous" : permet le chargement sécurisé depuis un autre domaine. referrerpolicy="no-referrer" : empêche le navigateur d’envoyer l’URL de ta page lors de la requête.-->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-    <img id="logo-site" src="images/logo/Booki.png" alt="logo du site">
+        <img id="logo-site" src="images/logo/Booki.png" alt="logo du site">
 
-    <nav>
-        <ul id="menu-nav">
-            <li><a href="#">Hébergements</a></li>
-            <li><a href="#">Activités</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul id="menu-nav">
+                <li><a class="liens-nav" href="#">Hébergements</a></li>
+                <li><a class="liens-nav" href="#">Activités</a></li>
+            </ul>
+        </nav>
     </header>
-    
+
+    <section id="formulaire-recherche">
+        <div>
+            <h1>Trouver votre hébergement pour des vacances de rêve</h1>
+            <p>En plein centre-ville ou en pleine nature</p>
+        </div>
+
+        <div id="barre-de-recherche">
+            <img id="symbole-position" src="images/symbole position.png" alt="symbole position">
+            <span>Marseille, France</span>
+            <button id="bouton-rechercher" type="submit">
+                <span id="texte-bouton-rechercher">Rechercher</span>
+                <img id="icone-bouton-rechercher" src="images/symbole loupe.png" alt="icône loupe">
+            </button>
+        </div>
+
+        <div>
+            <div id="filtres">
+                <h3>Filtres</h3>
+                <div id="ensemble-boutons-filtres">
+                    <button class="boutons-filtres">
+                        <img class="img-boutons-filtres" src="images/symbole price.png" alt="icône économique">
+                        <span>Économique</span>
+                    </button>
+                    <button class="boutons-filtres">
+                        <img class="img-boutons-filtres" src="images/symbole family.png" alt="icône familial">
+                        <span>Familial</span>
+                    </button>
+                    <button class="boutons-filtres">
+                        <img class="img-boutons-filtres" src="images/symbole romantic.png" alt="icône romantique">
+                        <span>Romantique</span>
+                    </button>
+                    <button class="boutons-filtres">
+                        <img class="img-boutons-filtres" src="images/symbole fire.png" alt="icône nos pépites">
+                        <span>Nos pépites</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
 
     </footer>

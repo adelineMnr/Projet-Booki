@@ -2,19 +2,157 @@
     width: 61.09px;
     height: 19px;
     padding: 30px 50px 30px 50px;
-    border: 2px solid blue;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid red;
 }
 
 #menu-nav {
     display: flex;
     gap: 68px;
     list-style: none;
-    border: 2px solid green;
+    padding: 0px 50px 0px 50px;
+}
+
+.liens-nav {
+    text-decoration: none;
+    color: black;
+    padding: 10px 0; /* pour que la bordure ait un peu de place */
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+
+.liens-nav:hover {
+    border-top: 3px solid blue;  /* Bordure au-dessus */
+    color: blue;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway';
+}
+
+#formulaire-recherche {
+    padding: 0px 35px 0px 35px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+#formulaire-recherche p {
+    font-size: 16px;
+}
+
+#barre-de-recherche {
+    display: flex;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+}
+
+#barre-de-recherche span {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 700;
+    padding: 13px 26px 13px 26px;
+    border-top: 1px solid #F2F2F2; 
+    border-bottom: 1px solid #F2F2F2;
+    border-left: none;            
+    border-right: none; 
+}
+
+#symbole-position {
+    padding: 14px 16px 15px 16px;
+    background-color: #F2F2F2;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+    border-left: 1px solid #F2F2F2;
+    border-right: none;
+}
+
+#bouton-rechercher {
+    background-color: #0065FC; 
+    color: white;
+    width: 132px;
+    height: 49px;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+    border-right: 1px solid #F2F2F2;
+    border-left: none; /* Pas de bordure à gauche pour la continuité */
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bouton-rechercher #texte-bouton-rechercher {
+    display: inline;
+    color: white; /* Force la couleur blanche */
+}
+
+#bouton-rechercher #icone-bouton-rechercher {
+    display: none;
+}
+
+#filtres {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+#ensemble-boutons-filtres {
+    display: flex;
+    gap: 15px;
+}
+
+.boutons-filtres {
+    padding: 4px 19px 4px 19px;
+    background-color: white;
+    border: 2px solid #F2F2F2;
+    border-radius: 25px;
+}
+
+.img-boutons-filtres {
+    
+}
+
+@media (max-width: 768px) {
+    .liens-nav:hover {
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid blue; /* Bordure en-dessous */
+        color: blue;
+    }
+
+    /* Sur mobile : bouton plus petit, icône visible, texte caché */
+    #bouton-rechercher {
+        width: 49px; /* Même hauteur que largeur pour un bouton carré */
+        min-width: 49px; /* Pour éviter que le bouton rétrécisse */
+    }
+
+    #bouton-rechercher #texte-bouton-rechercher {
+        display: none; /* Cache le texte */
+    }
+
+    #bouton-rechercher #icone-bouton-rechercher {
+        display: inline; /* Affiche la loupe */
+        width: 17px;     /* Taille de l'icône */
+        height: 17px;
+    }
 }
