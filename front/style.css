@@ -1,4 +1,10 @@
-#logo-site {
+:root{
+    --color-blue: #0065FC;
+    --color-light-blue: #DEEBFF;
+
+}
+
+.website-logo {
     width: 61.09px;
     height: 19px;
     padding: 30px 50px 30px 50px;
@@ -10,14 +16,14 @@ header {
     align-items: center;
 }
 
-#menu-nav {
+.navigation-menu {
     display: flex;
     gap: 68px;
     list-style: none;
     padding: 0px 50px 0px 50px;
 }
 
-.liens-nav {
+.navigation-link {
     text-decoration: none;
     color: black;
     padding: 10px 0; /* pour que la bordure ait un peu de place */
@@ -25,7 +31,7 @@ header {
     border-bottom: 3px solid transparent;
 }
 
-.liens-nav:hover {
+.navigation-link:hover {
     border-top: 3px solid blue;  /* Bordure au-dessus */
     color: blue;
 }
@@ -35,7 +41,7 @@ body {
     font-family: 'Raleway';
 }
 
-#formulaire-recherche {
+#search-form {
     padding: 0px 35px 0px 35px;
 }
 
@@ -47,17 +53,17 @@ h3 {
     font-size: 18px;
 }
 
-#formulaire-recherche p {
+#search-form p {
     font-size: 16px;
 }
 
-#barre-de-recherche {
+.search-bars {
     display: flex;
     align-items: center;
     padding: 20px 0px 20px 0px;
 }
 
-#barre-de-recherche span {
+.search-bars >span {
     font-size: 18px;
     color: #000000;
     font-weight: 700;
@@ -68,7 +74,7 @@ h3 {
     border-right: none; 
 }
 
-#symbole-position {
+.position-symbol {
     padding: 14px 16px 15px 16px;
     background-color: #F2F2F2;
     border-top-left-radius: 15px;
@@ -81,10 +87,9 @@ h3 {
     border-right: none;
 }
 
-#bouton-rechercher {
+.search-button {
     background-color: #0065FC; 
     color: white;
-    width: 132px;
     height: 49px;
     border-top: 1px solid #F2F2F2;
     border-bottom: 1px solid #F2F2F2;
@@ -101,27 +106,27 @@ h3 {
     justify-content: center;
 }
 
-#bouton-rechercher #texte-bouton-rechercher {
+.search-button .search-button-text {
     display: inline;
     color: white; /* Force la couleur blanche */
 }
 
-#bouton-rechercher #icone-bouton-rechercher {
+.search-button .search-button-icon {
     display: none;
 }
 
-#filtres {
+.filters {
     display: flex;
     align-items: center;
     gap: 20px; 
 }
 
-#ensemble-boutons-filtres {
+.all-filter-buttons {
     display: flex;
     gap: 15px;
 }
 
-.boutons-filtres {
+.filter button {
     padding: 4px 25px 4px 25px;
     background-color: white;
     border: 2px solid #F2F2F2;
@@ -129,23 +134,23 @@ h3 {
 }
 
 @media (max-width: 768px) {
-    .liens-nav:hover {
+    .navigation-link:hover {
         border-top: 3px solid transparent;
         border-bottom: 3px solid blue; /* Bordure en-dessous */
         color: blue;
     }
 
     /* Sur mobile : bouton plus petit, icône visible, texte caché */
-    #bouton-rechercher {
+    .search-button {
         width: 49px; /* Même hauteur que largeur pour un bouton carré */
         min-width: 49px; /* Pour éviter que le bouton rétrécisse */
     }
 
-    #bouton-rechercher #texte-bouton-rechercher {
+    .search-button .search-button-text {
         display: none; /* Cache le texte */
     }
 
-    #bouton-rechercher #icone-bouton-rechercher {
+    .search-button .search-button-icon {
         display: inline; /* Affiche la loupe */
         width: 17px;     /* Taille de l'icône */
         height: 17px;
