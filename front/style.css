@@ -1,13 +1,13 @@
 :root{
     --color-blue: #0065FC;
     --color-light-blue: #DEEBFF;
-
+    --color-grey: #D9D9D9;
+    --color-light-grey: #F2F2F2;
 }
 
 .website-logo {
     width: 61.09px;
     height: 19px;
-    padding: 30px 50px 30px 50px;
 }
 
 header {
@@ -38,23 +38,16 @@ header {
 
 body {
     margin: 0;
+    padding: 0px 50px 0px 50px;
     font-family: 'Raleway';
-}
-
-#search-form {
-    padding: 0px 35px 0px 35px;
 }
 
 h1 {
     font-size: 22px;
 }
 
-h3 {
+h2 {
     font-size: 18px;
-}
-
-#search-form p {
-    font-size: 16px;
 }
 
 .search-bars {
@@ -63,20 +56,21 @@ h3 {
     padding: 20px 0px 20px 0px;
 }
 
-.search-bars >span {
+.search-bars input {
     font-size: 18px;
     color: #000000;
     font-weight: 700;
-    padding: 13px 26px 13px 26px;
+    padding: 12px 26px 12px 26px;
     border-top: 1px solid #F2F2F2; 
     border-bottom: 1px solid #F2F2F2;
     border-left: none;            
     border-right: none; 
 }
 
-.position-symbol {
-    padding: 14px 16px 15px 16px;
+.fa-solid.fa-location-dot {
+    padding: 15px 16px 15px 16px;
     background-color: #F2F2F2;
+    color: #000000;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     border-top-right-radius: 0;
@@ -111,7 +105,7 @@ h3 {
     color: white; /* Force la couleur blanche */
 }
 
-.search-button .search-button-icon {
+.search-button .fa-solid.fa-magnifying-glass {
     display: none;
 }
 
@@ -119,6 +113,7 @@ h3 {
     display: flex;
     align-items: center;
     gap: 20px; 
+    border: none;
 }
 
 .all-filter-buttons {
@@ -126,11 +121,101 @@ h3 {
     gap: 15px;
 }
 
-.filter button {
-    padding: 4px 25px 4px 25px;
+.filter-button {
+    padding: 8px 25px 8px 25px;
     background-color: white;
     border: 2px solid #F2F2F2;
     border-radius: 25px;
+}
+
+.filter-button:hover {
+    background-color: var(--color-light-blue);
+}
+
+.filter-button span {
+    font-size: 14px;
+    padding-left: 8px;
+    font-weight: bold;
+}
+
+.fa-solid.fa-money-bill-wave {
+    color: var(--color-blue);
+    font-size: 20px;
+}
+
+.fa-solid.fa-person {
+    color: var(--color-blue);
+    font-size: 20px;
+}
+
+.fa-solid.fa-heart {
+    color: var(--color-blue);
+    font-size: 20px;
+}
+
+.fa-solid.fa-fire {
+    color: var(--color-blue);
+    font-size: 20px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.fa-solid.fa-info {
+    color: var(--color-blue);
+    font-size: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center; 
+    line-height: 20px; /* Aligne l’icône verticalement */
+    border-radius: 50%;
+    border: 1px solid #F2F2F2;
+}
+
+#marseille-lodging {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.lodging-container {
+   border: 2px solid #F2F2F2;
+   width: 60%;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+}
+
+.lodging-card {
+    border: 2px solid #F2F2F2;
+    width: 300px;
+    margin: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.img-lodging {
+    width: 96%; /* occupe toute la largeur de la carte */
+    height: 200px; /* hauteur fixe */
+    object-fit: cover;  /* recadre l’image sans la déformer */
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 0px;
+    padding: 5px;
+}
+
+.popular-container {
+    border: 2px solid #F2F2F2;
+    width: 30%;
 }
 
 @media (max-width: 768px) {
@@ -150,9 +235,10 @@ h3 {
         display: none; /* Cache le texte */
     }
 
-    .search-button .search-button-icon {
+    .search-button .fa-solid.fa-magnifying-glass {
         display: inline; /* Affiche la loupe */
         width: 17px;     /* Taille de l'icône */
         height: 17px;
+        color: #ffffff;
     }
 }
