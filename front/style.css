@@ -178,44 +178,96 @@ h2 {
 
 #marseille-lodging {
     display: flex;
-    align-items: center;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 30px; /* espace horizontal entre lodging-container et popular-container */
 }
 
 .lodging-container {
-   border: 2px solid #F2F2F2;
-   width: 60%;
+    background-color: var(--color-light-grey);
+    border-radius: 20px;
+    padding: 30px 20px 30px 20px;
+    box-sizing: border-box;
+    width: 65%;
 }
 
-.line {
+.lodging-container .line {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap; /* permet aux cards de passer à la ligne si pas assez de place */
+    gap: 20px;
+    margin: 35px 0px 35px 0px;
 }
 
-.lodging-card {
-    border: 2px solid #F2F2F2;
-    width: 300px;
-    margin: 20px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+.lodging-container .lodging-card {
+    flex: 1 1 calc(33% - 20px); /* chaque card occupe environ 1/3 de la largeur */
+    background-color: white;    
+    border-radius: 20px;        
+    filter: drop-shadow(0px 3px 15px rgba(0,0,0,0.1)); 
+    display: flex;              
+    flex-direction: column;     
 }
 
 .img-lodging {
-    width: 96%; /* occupe toute la largeur de la carte */
-    height: 200px; /* hauteur fixe */
+    width: 96%;
+    height: 120px; /* hauteur fixe */
     object-fit: cover;  /* recadre l’image sans la déformer */
-    border-top-left-radius: 15px;
+    border-top-left-radius: 20px;
     border-bottom-left-radius: 0px;
-    border-top-right-radius: 15px;
+    border-top-right-radius: 20px;
     border-bottom-right-radius: 0px;
     padding: 5px;
 }
 
 .popular-container {
-    border: 2px solid #F2F2F2;
-    width: 30%;
+    display: flex;           
+    flex-direction: column;  
+    border-radius: 20px;
+    padding: 30px 20px 30px 20px;
+    gap: 20px;   
+    width: 32%;   
+    background-color: var(--color-light-grey);         
+}
+
+.top-popular-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-solid.fa-chart-line {
+    color: var(--color-blue);
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.popular-container .lodging-card {
+    display: flex;           
+    align-items: center;     
+    background-color: white; 
+    margin: 20px;
+    border-radius: 20px;     
+    filter: drop-shadow(0px 3px 15px rgba(0,0,0,0.1));          
+    flex: 1;    
+    height: 150px;           
+}
+
+.img-popular {
+    width: 33%;
+    height: 136px;
+    object-fit: cover;  /* recadre l’image sans la déformer */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 5px;
+}
+
+.popular-container .popular-card-infos {
+    flex: 1;                  
+    padding: 15px;            
+    display: flex;            
+    flex-direction: column;   
+    justify-content: center;  
+}
+
+h3 .lodging-container.popular-container {
+    font-size: 16px;
 }
 
 @media (max-width: 768px) {
