@@ -1,0 +1,55 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.website-logo {
+    width: 61.09px;
+    height: 19px;
+}
+
+.navigation-menu {
+    display: flex;
+    gap: 68px;
+    list-style: none;
+    padding: 0px 50px 0px 50px;
+}
+
+.navigation-link {
+    text-decoration: none;
+    color: black;
+    padding: 10px 0; /* pour que la bordure ait un peu de place */
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+
+.navigation-link:hover {
+    border-top: 3px solid blue;  /* Bordure au-dessus */
+    color: blue;
+}
+
+
+/****** Media queries ***********/
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    header {
+        flex-direction: column;   /* logo + nav en colonne */
+        justify-content: center;  /* centre verticalement */
+        align-items: center;      /* centre horizontalement */
+        gap: 20px;                /* espace entre logo et menu */
+    }
+
+    .website-logo {
+        margin-top: 15px;
+    }
+
+    .navigation-link:hover {
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid blue; /* Bordure en-dessous */
+        color: blue;
+    }
+}

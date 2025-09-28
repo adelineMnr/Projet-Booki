@@ -1,0 +1,44 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0px 0px 0px;
+    height: 150px;
+}
+
+.footer-list {
+    display: flex;
+    
+}
+
+.footer-card {
+    background-color: var(--color-light-grey);
+    width: 440px;
+    height:100%;
+    display: flex;              
+    flex-direction: column;
+}
+
+.footer-card h2 {
+    white-space: nowrap; /* Garde sur une seule ligne */
+    margin: 15px 0px 15px 15px;
+    font-size: clamp(0.6rem, 1.3vw, 0.9rem); /* min = 0.7rem, "fluide" = 1.3% largeur écran, max = 1rem */
+}
+
+.footer-card ul {
+    list-style: none;   /* Enlève les puces */
+    padding: 0;         /* Supprime le retrait par défaut */
+    margin: 0;
+}
+
+.footer-card a {
+    text-decoration: none; /* Enlève le soulignement */
+    white-space: nowrap; /* Le texte reste sur une seule ligne */
+    color: black;
+    font-size: clamp(0.5rem, 1.2vw, 0.9rem); /* min = 0.7rem, "fluide" = 1.3% largeur écran, max = 1rem */
+    margin: 15px 0px 15px 15px;
+}
+
+.footer-card li {
+    margin: 0px 0px 10px 0px;    
+}

@@ -21,8 +21,12 @@
     <!--Pour importer Font Awesome, une bibliothèque d’icônes. integrity : permet au navigateur de vérifier que le fichier n’a pas été modifié (sécurité). crossorigin="anonymous" : permet le chargement sécurisé depuis un autre domaine. referrerpolicy="no-referrer" : empêche le navigateur d’envoyer l’URL de ta page lors de la requête.-->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="lodging.css">
+    <link rel="stylesheet" href="activity.css">
+    <link rel="stylesheet" href="footer.css">
 
 </head>
 
@@ -38,7 +42,7 @@
         </nav>
     </header>
 
-    <section>
+    <section id="search">
         <h1>Trouver votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre-ville ou en pleine nature</p>
 
@@ -173,7 +177,6 @@
                     </div>
                 </article>
             </div>
-            <a href="#">Afficher plus</a>
         </section>
 
         <section class="popular-container">
@@ -181,48 +184,50 @@
                 <h2>Les plus populaires</h2>
                 <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
             </div>
-            <article class="lodging-card">
-                <img class="img-popular" src="images/hebergements/emile-guillemot.jpg" alt="logement 7">
-                <div class="popular-card-infos">
-                    <h3>Hôtel Le soleil du matin</h3>
-                    <span>Nuit à partir de 25€</span>
-                    <div class="card-rating">
-                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                        <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
+            <div class="all-popular-card">
+                <article class="popular-card">
+                    <img class="img-popular" src="images/hebergements/emile-guillemot.jpg" alt="logement 7">
+                    <div class="popular-card-infos">
+                        <h3>Hôtel Le soleil du matin</h3>
+                        <span>Nuit à partir de 25€</span>
+                        <div class="card-rating">
+                            <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article class="lodging-card">
-                <img class="img-popular" src="images/hebergements/aw-creative.jpg" alt="logement 8">
-                <div class="popular-card-infos">
-                    <h3>Chambres d'hôtes Au coeur de l'eau</h3>
-                    <span>Nuit à partir de 71€</span>
-                    <div class="card-rating">
-                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                        <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
+                </article>
+                <article class="popular-card">
+                    <img class="img-popular" src="images/hebergements/aw-creative.jpg" alt="logement 8">
+                    <div class="popular-card-infos">
+                        <h3>Chambres d'hôtes Au coeur de l'eau</h3>
+                        <span>Nuit à partir de 71€</span>
+                        <div class="card-rating">
+                            <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article class="lodging-card">
-                <img class="img-popular" src="images/hebergements/febrian-zakaria2.jpg" alt="logement 9">
-                <div class="popular-card-infos">
-                    <h3>Hôtel Bleu et Blanc</h3>
-                    <span>Nuit à partir de 68€</span>
-                    <div class="card-rating">
-                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                        <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
+                </article>
+                <article class="popular-card">
+                    <img class="img-popular" src="images/hebergements/febrian-zakaria2.jpg" alt="logement 9">
+                    <div class="popular-card-infos">
+                        <h3>Hôtel Bleu et Blanc</h3>
+                        <span>Nuit à partir de 68€</span>
+                        <div class="card-rating">
+                            <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
+            </div>
         </section>
     </div>
 
@@ -250,28 +255,28 @@
     </section>
 
     <footer>
-            <div class="footer-card">
-                <h2>À propos</h2>
-                <ul>
+        <div class="footer-card">
+            <h2>À propos</h2>
+            <ul>
                 <li><a href="#">Fonctionnement du site</a></li>
                 <li><a href="#">Conditions générales</a></li>
                 <li><a href="#">Données et confidentialité</a></li>
-                </ul>
-            </div>
-            <div class="footer-card">
-                <h2>Nos hébergements</h2>
-                <ul>
+            </ul>
+        </div>
+        <div class="footer-card">
+            <h2>Nos hébergements</h2>
+            <ul>
                 <li><a href="#">Charte qualité</a></li>
                 <li><a href="#">Proposer votre hôtel</a></li>
-                </ul>
-            </div>
-            <div class="footer-card">
-                <h2>Assistance</h2>
-                <ul>
+            </ul>
+        </div>
+        <div class="footer-card">
+            <h2>Assistance</h2>
+            <ul>
                 <li><a href="#">Centre d'aide</a></li>
                 <li><a href="#">Nous contacter</a></li>
-                </ul>
-            </div>
+            </ul>
+        </div>
     </footer>
 </body>
 
