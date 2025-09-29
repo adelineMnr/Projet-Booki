@@ -42,3 +42,41 @@ footer {
 .footer-card li {
     margin: 0px 0px 10px 0px;    
 }
+
+
+/****** Media queries ***********/
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    footer {
+        flex-direction: column; /* le footer entier passe en colonne */
+        height: auto;           /* hauteur auto pour s’adapter au contenu */
+        align-items: stretch;   /* chaque colonne prend toute la largeur */
+    }
+
+    .footer-list {
+        flex-direction: column; /* garde tes cartes les unes sous les autres */
+        width: 100%;           /* occupe toute la largeur dispo */
+    }
+
+    .footer-card {
+        width: 100%;            /* plus de largeur fixe */
+        max-width: none;        /* on enlève la limite */
+        padding-bottom: 10px;
+    }
+
+    .footer-card li {
+        margin-left: 20px; 
+    }
+
+    .footer-card h2 {
+        font-size: 18px;
+        margin-left: 40px;
+    }
+
+    .footer-card a {
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+}

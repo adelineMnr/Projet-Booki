@@ -42,23 +42,39 @@
 }
 
 
+/****** Media queries ***********/
+
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+    #activities-container h2 {
+        margin: 0px 0px 30px 20px;
+        font-size: 20px;
+    }
+
     .activities-list {
+        display: flex;
         flex-direction: column; /* empile les cards verticalement */
-        gap: 20px; /* espace entre les cartes */
+        width: 97%;
+        gap: 15px; /* espace vertical entre les cartes */
     }
 
     .activity-card {
-        width: 100%;
-        height: 100px;
-        border: 2px solid blue;
+        width: 85%; /*prend toute la largeur*/
+        max-width: 100%; /*pour ne jamais dépasser*/
+        height: auto;
+        aspect-ratio: auto; /*annule de ratio forcé de 8/10 en desktop*/
+        margin: 0px 30px 0px 30px;
     }
 
     .img-activity {
-        width: auto;
-        height: 130px;
+        width: 100%; /* image pleine largeur */
+        height: 150px; /* hauteur auto pour respecter les proportions */
         object-fit: cover;
-        border: 2px solid green;
+        /*border-radius: 20px 20px 0 0;*/
+    }
+
+    .activity-card h3 {
+        margin: 15px 0px 15px 15px;
+        font-size: clamp(0.8rem, 1.3vw, 0.9rem); /* min = 0.7rem, "fluide" = 1.3% largeur écran, max = 1rem */
     }
 }

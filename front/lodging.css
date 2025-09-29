@@ -4,6 +4,12 @@
     gap: 30px; /* espace horizontal entre lodging-container et popular-container */
 }
 
+#lodging a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
 .lodging-container {
     background-color: var(--color-light-grey);
     border-radius: 20px;
@@ -136,7 +142,7 @@
 }
 
 .popular-card-infos .card-rating {
-    margin: auto 0px 10px 10px;
+    margin: auto 0px 10px 10px; /*auto car sinon le margin n'est pas le même partout*/
 }
 
 
@@ -177,6 +183,9 @@
     }
 }
 
+
+/****** Media queries ***********/
+
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     #lodging {
@@ -192,6 +201,11 @@
         padding: 0px; /* padding ajusté pour ne pas dépasser */
         border-radius: 0px; /* optionnel si tu veux que ce soit flush avec le bord */
         background-color: white;
+        padding: 10px 25px 0px 25px;
+    }
+
+    .lodging-container h2 {
+        font-size: 20px;
     }
 
     .popular-container {
@@ -213,6 +227,32 @@
         flex: 1 1 100%; /* chaque card prend toute la largeur */
     }
 
+    .lodging-card-infos {
+    flex: 1;                            
+    display: flex;            
+    flex-direction: column;   
+    justify-content: center;
+    }
+
+    .lodging-card-infos h3 {
+        margin: 10px 0px 10px 15px;
+        font-size: clamp(0.9rem, 1.3vw, 1rem); /* min = 0.7rem, "fluide" = 1.3% largeur écran, max = 1rem */
+    }
+
+    .lodging-card-infos span {
+        margin: 0px 0px 0px 15px;
+        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+    }
+
+    .lodging-card-infos .card-rating {
+        margin: 5px 0px 10px 15px;
+    }
+
+    .popular-container h2 {
+        font-size: 20px;
+        padding: 0px 0px 0px 10px;
+    }
+
     .all-popular-card {
         flex-direction: column;
         gap: 15px;
@@ -220,5 +260,26 @@
 
     .popular-card {
         width: 100%; /* chaque popular-card prend toute la largeur */
+    }
+
+    .popular-card-infos {
+    flex: 1;                
+    display: flex;                
+    flex-direction: column;
+    height: 100%;
+}
+
+    .popular-card-infos h3 {
+    margin: 15px 0px 6px 10px;
+    font-size: clamp(0.9rem, 1.3vw, 1rem); /* min = 0.7rem, "fluide" = 1.3% largeur écran, max = 1rem */
+    }
+
+    .popular-card-infos span {
+        margin: 0px 0px 0px 10px;
+        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+    }
+
+    .popular-card-infos .card-rating {
+        margin: auto 0px 15px 10px; 
     }
 }
