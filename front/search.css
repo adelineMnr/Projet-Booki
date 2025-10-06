@@ -157,6 +157,10 @@
         color: blue;
     }
 
+    .search-bars {
+        margin-top: 10px;
+    }
+
     .search-bars input {
         max-width: 250px; /*largeur réduite de l’input*/
         margin-right: -10px;
@@ -207,6 +211,7 @@
         flex-direction: column; /*le titre passe au-dessus*/
         align-items: flex-start; /*garde l’alignement à gauche*/
         gap: 10px; /*espace entre le titre et les boutons*/
+        margin-top: 10px;
     }
 
     .all-filter-buttons {
@@ -221,5 +226,9 @@
         height: 45px;
         text-align: center;
         justify-content: center;
+    }
+
+    .info {
+        margin: 30px 0 30px 0;
     }
 }

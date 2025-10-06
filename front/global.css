@@ -5,9 +5,20 @@
 }
 
 body {
-    margin: 0;
     padding: 0 35px 0 35px;
     font-family: 'Raleway';
+    max-width: 1440px;    /* largeur max */
+    min-width: 320px;     /* largeur min */
+    margin: 0 auto;       /* centre horizontalement */
+    background-color: white;  /* ou autre, pour contraste */
+}
+
+.link-card {
+    text-decoration: none; /* enlève le soulignement */
+    color: inherit; /* garde la même couleur de texte que la carte */
+    display: flex; /* le lien prend la taille de son contenu (ici la card) */
+    flex: 1 1 30%; /* même valeur que .lodging-card */
+    max-width: 340px; /* ou ta valeur d'origine */
 }
 
 
