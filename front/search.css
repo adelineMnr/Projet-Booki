@@ -151,19 +151,14 @@
         padding-left: 10px;
     }
 
-    .navigation-link:hover {
-        border-top: 3px solid transparent;
-        border-bottom: 3px solid blue; /* Bordure en-dessous */
-        color: blue;
-    }
-
     .search-bars {
         margin-top: 10px;
+        border: 1px solid orange;
     }
 
     .search-bars input {
         max-width: 250px; /*largeur réduite de l’input*/
-        margin-right: -10px;
+        margin-right: -10px; /*pour que la bordure dépasse => harmonise la barre de recherche*/
     }
 
     /* Sur mobile : bouton plus petit, icône visible, texte caché */
@@ -222,10 +217,10 @@
     }
 
     .filter-button {
-        width: 170px; 
         height: 45px;
-        text-align: center;
-        justify-content: center;
+        font-size: clamp(0.7rem, 2.5vw, 1rem); /* min = 0.7rem, fluide = 2.5vw, max = 1rem */
+        padding: 8px clamp(10px, 4vw, 20px); /* padding horizontal qui s’adapte */
+        border-radius: 20px;
     }
 
     .info {

@@ -52,11 +52,15 @@ header {
         gap: 68px;
         list-style: none;
         padding: 0 50px 0 50px;
+        width: 67%;
+        border: 1px solid blue;
     }
 
     .navigation-link {
         margin: 0;
         display: block; /*fait que le lien prend toute la largeur disponible dans son parent*/
+        width: 50%;
+        border: 1px solid green;
     }
 
     .navigation-link:hover {

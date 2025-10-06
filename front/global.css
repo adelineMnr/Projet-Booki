@@ -11,6 +11,7 @@ body {
     min-width: 320px;     /* largeur min */
     margin: 0 auto;       /* centre horizontalement */
     background-color: white;  /* ou autre, pour contraste */
+    border: 1px solid red;
 }
 
 .link-card {
