@@ -13,17 +13,19 @@ header {
 
 .navigation-menu {
     display: flex;
-    gap: 68px;
-    list-style: none;
-    padding: 0px 50px 0px 50px;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+    gap: 60px;
 }
 
 .navigation-link {
-    text-decoration: none;
     color: black;
     padding: 10px 0; /* pour que la bordure ait un peu de place */
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
+    width: 50%;
+    text-decoration: none;
 }
 
 .navigation-link:hover {
@@ -35,12 +37,17 @@ header {
 /****** Media queries ***********/
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     header {
-        flex-direction: column;   /* logo + nav en colonne */
-        justify-content: center;  /* centre verticalement */
-        align-items: center;      /* centre horizontalement */
-        gap: 20px;                /* espace entre logo et menu */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        text-align: center;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
     }
 
     .website-logo {
@@ -49,18 +56,17 @@ header {
 
     .navigation-menu {
         display: flex;
-        gap: 68px;
-        list-style: none;
-        padding: 0 50px 0 50px;
-        width: 67%;
-        border: 1px solid blue;
+        padding: 0;
+        margin-top: 20px;
+        width: 100%;
+        gap: 0; /*permet d'enlever le gap qu'il y a sur la version desktop*/
     }
 
     .navigation-link {
         margin: 0;
         display: block; /*fait que le lien prend toute la largeur disponible dans son parent*/
         width: 50%;
-        border: 1px solid green;
+        text-decoration: none;
     }
 
     .navigation-link:hover {

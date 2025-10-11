@@ -46,8 +46,14 @@
     font-size: clamp(0.7rem, 1.3vw, 1rem); /* min = 0.7rem, "fluide" = 1.3% largeur écran, max = 1rem */
 }
 
-.lodging-card-infos span {
+.lodging-card-infos p {
     margin: 0 0 0 15px;
+    font-size: clamp(0.6rem, 1.3vw, 0.9rem);
+}
+
+.lodging-card-infos span {
+    margin: 0;
+    font-weight: bold;
     font-size: clamp(0.6rem, 1.3vw, 0.9rem);
 }
 
@@ -133,8 +139,14 @@
     font-size: clamp(0.7rem, 1.3vw, 1rem); /* min = 0.7rem, "fluide" = 1.3% largeur écran, max = 1rem */
 }
 
-.popular-card-infos span {
+.popular-card-infos p {
     margin-left: 10px;
+    font-size: clamp(0.6rem, 1.3vw, 0.9rem);
+}
+
+.popular-card-infos span {
+    margin: 0;
+    font-weight: bold;
     font-size: clamp(0.6rem, 1.3vw, 0.9rem);
 }
 
@@ -175,14 +187,14 @@
         font-size: 14px;
     }
 
-    .popular-card-infos span {
+    .popular-card-infos p {
         font-size: 13px;
     }
 }
 
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     #lodging {
         flex-direction: column;
         margin: 0;
@@ -191,42 +203,42 @@
     /* Inverser l'ordre sur mobile */
     .lodging-container {
         order: 2; /* apparait après popular-container */
-        width: 100%; /* prend toute la largeur disponible */
-        margin: 0; /* supprime les marges qui créent le dépassement */
-        padding: 0; /* padding ajusté pour ne pas dépasser */
-        border-radius: 0; /* optionnel si tu veux que ce soit flush avec le bord */
+        width: fit-content;
+        margin: 0 auto 0 auto;
+        padding: 0 1px 0 1px;
+        border-radius: 0; 
         background-color: white;
-        padding: 10px 25px 0px 25px;
     }
 
     .lodging-container h2 {
         font-size: 20px;
+        margin-top: 30px;
     }
 
     .popular-container {
         order: 1; /* apparait avant lodging-container */
-        width: 100%; /* prend toute la largeur disponible */
-        margin: 0; /* supprime les marges qui créent le dépassement */
-        padding: 10px 15px; /* padding ajusté pour ne pas dépasser */
+        width: 320px; /* prend toute la largeur disponible */
+        padding: 0 1px 0 1px;
+        margin: 0 auto 0 auto;
         box-sizing: border-box; /* inclut padding dans la largeur */
-        border-radius: 0; /* optionnel si tu veux que ce soit flush avec le bord */
+        border-radius: 0; /* pour que ce soit flush avec le bord */
     }
 
     /* Pour que les cards soient en colonne */
     .lodging-container .line {
         flex-direction: column;
-        gap: 15px; /* espace vertical entre les cards */
+        width: fit-content;
     }
 
     .lodging-card {
-        flex: 1 1 100%; /* chaque card prend toute la largeur */
+        width: 295px;
     }
 
     .lodging-card-infos {
-    flex: 1;                            
-    display: flex;            
-    flex-direction: column;   
-    justify-content: center;
+        flex: 1;                            
+        display: flex;            
+        flex-direction: column;   
+        justify-content: center;
     }
 
     .lodging-card-infos h3 {
@@ -234,8 +246,14 @@
         font-size: clamp(0.9rem, 1.3vw, 1rem); /* min = 0.7rem, "fluide" = 1.3% largeur écran, max = 1rem */
     }
 
-    .lodging-card-infos span {
+    .lodging-card-infos p {
         margin-left: 15px;
+        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+    }
+
+    .lodging-card-infos span {
+        margin: 0;
+        font-weight: bold;
         font-size: clamp(0.8rem, 1.3vw, 0.9rem);
     }
 
@@ -245,17 +263,23 @@
 
     .popular-container h2 {
         font-size: 20px;
-        padding-left: 10px;
+        padding: 15px 0 10px 10px;
+    }
+
+    .fa-solid.fa-chart-line {
+        color: var(--color-blue);
+        font-size: 20px;
+        padding: 20px 10px 0 0;
     }
 
     .all-popular-card {
         flex-direction: column;
-        gap: 15px;
+        width: fit-content;
     }
 
     .popular-card {
-        width: 100%; /* chaque popular-card prend toute la largeur */
-        margin: 5px 0 10px 0;
+        width: 295px;
+        margin: 10px 10px 10px 10px;
     }
 
     .popular-card-infos {
@@ -272,8 +296,14 @@
         font-size: clamp(0.9rem, 1.3vw, 1rem); /* min = 0.7rem, "fluide" = 1.3% largeur écran, max = 1rem */
     }
 
-    .popular-card-infos span {
+    .popular-card-infos p {
         margin-left: 10px;
+        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+    }
+
+    .popular-card-infos span {
+        margin: 0;
+        font-weight: bold;
         font-size: clamp(0.8rem, 1.3vw, 0.9rem);
     }
 

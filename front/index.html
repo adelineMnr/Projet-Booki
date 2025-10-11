@@ -35,10 +35,10 @@
         <img class="website-logo" src="images/logo/Booki.png" alt="logo du site">
 
         <nav>
-            <ul class="navigation-menu">
-                <li><a href="#lodging" class="navigation-link">Hébergements</a></li>
-                <li><a href="#activities-container" class="navigation-link">Activités</a></li>
-            </ul>
+            <div class="navigation-menu">
+                <a href="#lodging" class="navigation-link">Hébergements</a>
+                <a href="#activities-container" class="navigation-link">Activités</a>
+            </div>
         </nav>
     </header>
 
@@ -48,31 +48,33 @@
 
         <form class="search-bars" method="get" action="recherche.html">
             <!--aria-hidden sert à rendre un élément invisible pour les lecteurs d’écran tout en restant visible à l’écran.-->
-            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-            <input type="search" placeholder="Marseille, France">
-            <button class="search-button" type="submit">
-                <span class="search-button-text">Rechercher</span>
-                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-            </button>
+            <div class="all-elements-search-bars">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <input type="search" placeholder="Marseille, France">
+                <button class="search-button" type="submit">
+                    <span class="search-button-text">Rechercher</span>
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                </button>
+            </div>
         </form>
 
         <div class="filters">
             <h2>Filtres</h2>
             <div class="all-filter-buttons">
                 <button class="filter-button" type="button">
-                    <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
+                    <i class="fa-solid fa-money-bill-wave icon-filter" aria-hidden="true"></i>
                     <span>Économique</span>
                 </button>
                 <button class="filter-button" type="button">
-                    <i class="fa-solid fa-person" aria-hidden="true"></i>
+                    <i class="fa-solid fa-person icon-filter" aria-hidden="true"></i>
                     <span>Familial</span>
                 </button>
                 <button class="filter-button" type="button">
-                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-solid fa-heart icon-filter" aria-hidden="true"></i>
                     <span>Romantique</span>
                 </button>
                 <button class="filter-button" type="button">
-                    <i class="fa-solid fa-fire" aria-hidden="true"></i>
+                    <i class="fa-solid fa-fire icon-filter" aria-hidden="true"></i>
                     <span>Nos pépites</span>
                 </button>
             </div>
@@ -93,7 +95,7 @@
                         <img class="img-lodging" src="images/hebergements/fred-kleber.jpg" alt="logement 1">
                         <div class="lodging-card-infos">
                             <h3>Hôtel du port</h3>
-                            <span>Nuit à partir de 52€</span>
+                            <p>Nuit à partir de <span>52€</span></p>
                             <div class="card-rating">
                                 <!--aria-hidden sert à rendre un élément invisible pour les lecteurs d’écran tout en restant visible à l’écran.-->
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -110,7 +112,7 @@
                         <img class="img-lodging" src="images/hebergements/febrian-zakaria.jpg" alt="logement 2">
                         <div class="lodging-card-infos">
                             <h3>Hôtel Chez Amina</h3>
-                            <span>Nuit à partir de 96€</span>
+                            <p>Nuit à partir de <span>96€</span></p>
                             <div class="card-rating">
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -126,7 +128,7 @@
                         <img class="img-lodging" src="images/hebergements/reisetopia.jpg" alt="logement 3">
                         <div class="lodging-card-infos">
                             <h3>Hôtel Les mouettes</h3>
-                            <span>Nuit à partir de 76€</span>
+                            <p>Nuit à partir de <span>76€</span></p>
                             <div class="card-rating">
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -145,7 +147,7 @@
                         <img class="img-lodging" src="images/hebergements/annie-spratt.jpg" alt="logement 4">
                         <div class="lodging-card-infos">
                             <h3>Hôtel de la mer</h3>
-                            <span>Nuit à partir de 46€</span>
+                            <p>Nuit à partir de <span>46€</span></p>
                             <div class="card-rating">
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -161,7 +163,7 @@
                         <img class="img-lodging" src="images/hebergements/marcus-loke.jpg" alt="logemnt 5">
                         <div class="lodging-card-infos">
                             <h3>Auberge La Canebière</h3>
-                            <span>Nuit à partir de 25€</span>
+                            <p>Nuit à partir de <span>25€</span></p>
                             <div class="card-rating">
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -177,7 +179,7 @@
                         <img class="img-lodging" src="images/hebergements/nicate-lee.jpg" alt="logement 6">
                         <div class="lodging-card-infos">
                             <h3>Auberge Le Panier</h3>
-                            <span>Nuit à partir de 23€</span>
+                            <p>Nuit à partir de <span>23€</span></p>
                             <div class="card-rating">
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -203,7 +205,7 @@
                         <img class="img-popular" src="images/hebergements/emile-guillemot.jpg" alt="logement 7">
                         <div class="popular-card-infos">
                             <h3>Hôtel Le soleil du matin</h3>
-                            <span>Nuit à partir de 25€</span>
+                            <p>Nuit à partir de <span>25€</span></p>
                             <div class="card-rating">
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -219,7 +221,7 @@
                         <img class="img-popular" src="images/hebergements/aw-creative.jpg" alt="logement 8">
                         <div class="popular-card-infos">
                             <h3>Chambres d'hôtes Au coeur de l'eau</h3>
-                            <span>Nuit à partir de 71€</span>
+                            <p>Nuit à partir de <span>71€</span></p>
                             <div class="card-rating">
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -235,7 +237,7 @@
                         <img class="img-popular" src="images/hebergements/febrian-zakaria2.jpg" alt="logement 9">
                         <div class="popular-card-infos">
                             <h3>Hôtel Bleu et Blanc</h3>
-                            <span>Nuit à partir de 68€</span>
+                            <p>Nuit à partir de <span>68€</span></p>
                             <div class="card-rating">
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>

@@ -11,20 +11,15 @@
 }
 
 .search-bars {
-    display: flex;
-    align-items: center;
     padding: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
-.search-bars input {
-    font-size: 18px;
-    color: #000000;
-    font-weight: 700;
-    padding: 12px 26px 12px 26px;
-    border-top: 1px solid #F2F2F2; 
-    border-bottom: 1px solid #F2F2F2;
-    border-left: none;            
-    border-right: none; 
+.all-elements-search-bars {
+    width: 100%;
+    display: flex;
 }
 
 .fa-solid.fa-location-dot {
@@ -39,25 +34,41 @@
     border-bottom: 1px solid #F2F2F2;
     border-left: 1px solid #F2F2F2;
     border-right: none;
+    width: 15%;
+    max-width: 15px;
+    height: 15px;
+}
+
+.search-bars input {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 700;
+    padding: 12px 26px 12px 26px;
+    border-top: 1px solid #F2F2F2; 
+    border-bottom: 1px solid #F2F2F2;
+    border-left: none;            
+    border-right: none; 
+    max-width: 70%; /*largeur réduite de l’input*/
+    height: 47px;
 }
 
 .search-button {
     background-color: #0065FC; 
     color: white;
-    height: 49px;
     border-top: 1px solid #F2F2F2;
     border-bottom: 1px solid #F2F2F2;
     border-right: 1px solid #F2F2F2;
     border-left: none; /* Pas de bordure à gauche pour la continuité */
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-radius: 0 15px 15px 0;
     font-weight: 700;
     font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 20%;
+    height: 47px;
+    max-width: 110px;
+    min-width: 80px; /* Pour éviter que le bouton rétrécisse */
 }
 
 .search-button .search-button-text {
@@ -83,7 +94,7 @@
 }
 
 .filter-button {
-    padding: 8px 25px 8px 25px;
+    padding: 8px 22px 8px 22px;
     background-color: white;
     border: 2px solid #F2F2F2;
     border-radius: 25px;
@@ -102,24 +113,10 @@
     font-weight: bold;
 }
 
-.fa-solid.fa-money-bill-wave {
+.icon-filter {
+    width: 20px;
+    font-size: 18px;
     color: var(--color-blue);
-    font-size: 20px;
-}
-
-.fa-solid.fa-person {
-    color: var(--color-blue);
-    font-size: 20px;
-}
-
-.fa-solid.fa-heart {
-    color: var(--color-blue);
-    font-size: 20px;
-}
-
-.fa-solid.fa-fire {
-    color: var(--color-blue);
-    font-size: 20px;
 }
 
 .info {
@@ -145,28 +142,71 @@
 
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     #search {
         margin: 10px;
         padding-left: 10px;
+        width: fit-content;
+        margin: 0 auto 0 auto;
+    }
+
+    #search h1 {
+        width: 300px;
+    }
+
+    #search p {
+        width: 270px;
+    }
+
+    #search h2 {
+        width: 300px;
     }
 
     .search-bars {
         margin-top: 10px;
-        border: 1px solid orange;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .all-elements-search-bars {
+        width: fit-content;
+        display: flex;
+        position: relative;
+    }
+
+    .fa-solid.fa-location-dot {
+        background-color: #F2F2F2;
+        color: #000000;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top: 1px solid #F2F2F2;
+        border-bottom: 1px solid #F2F2F2;
+        border-left: 1px solid #F2F2F2;
+        border-right: none;
+        width: 15%;
+        max-width: 15px;
+        height: 15px;
     }
 
     .search-bars input {
-        max-width: 250px; /*largeur réduite de l’input*/
-        margin-right: -10px; /*pour que la bordure dépasse => harmonise la barre de recherche*/
+        max-width: 70%; /*largeur réduite de l’input*/
+        height: 47px;
+        font-size: clamp(0.9rem, 1.7vw, 1.3rem);
     }
 
     /* Sur mobile : bouton plus petit, icône visible, texte caché */
     .search-button {
-        width: 49px; /* Même hauteur que largeur pour un bouton carré */
-        min-width: 49px; /* Pour éviter que le bouton rétrécisse */
+        width: 15%; /* Même hauteur que largeur pour un bouton carré */
+        height: 47px;
+        max-width: 50px;
+        min-width: 50px; /* Pour éviter que le bouton rétrécisse */
         border-radius: 15px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        right: 0;
     }
 
     .search-button .search-button-text {
@@ -183,22 +223,18 @@
     .all-filter-buttons {
         display: flex;
         flex-wrap: wrap;
+        width: fit-content;
     }
 
-    .fa-solid.fa-money-bill-wave {
+    .icon-filter {
+        width: 20px;
         font-size: 18px;
     }
 
-    .fa-solid.fa-person {
-        font-size: 18px;
-    }
-
-    .fa-solid.fa-heart {
-        font-size: 18px;
-    }
-
-    .fa-solid.fa-fire {
-        font-size: 18px;
+    .filter-button span {
+        font-size: clamp(0.9rem, 1.3vw, 1rem);
+        padding-left: 8px;
+        font-weight: bold;
     }
 
     .filters {
@@ -219,8 +255,9 @@
     .filter-button {
         height: 45px;
         font-size: clamp(0.7rem, 2.5vw, 1rem); /* min = 0.7rem, fluide = 2.5vw, max = 1rem */
-        padding: 8px clamp(10px, 4vw, 20px); /* padding horizontal qui s’adapte */
+        padding: 8px;
         border-radius: 20px;
+        width: 135px;
     }
 
     .info {
