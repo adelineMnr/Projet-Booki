@@ -41,37 +41,24 @@ footer {
 
 
 /****** Media queries ***********/
-/* Small devices (phones, less than 529.98px) */
-@media (max-width: 530px) {
+
+/* Tout le mobile */
+@media (max-width: 768px) {
     footer {
         flex-direction: column; /* le footer entier passe en colonne */
         height: auto; /* hauteur auto pour s’adapter au contenu */
         align-items: stretch; /* chaque colonne prend toute la largeur */
-        width: 320px;
-        margin: 60px auto 0 auto;
-        border: 1px solid orange;
-    }
-}
-
-
-/* Small devices (phones, less than 768px) */
-@media (min-width: 530px) and (max-width: 768px) {
-    footer {
-        flex-direction: column; /* le footer entier passe en colonne */
-        height: auto;           /* hauteur auto pour s’adapter au contenu */
-        align-items: stretch;   /* chaque colonne prend toute la largeur */
-        width: 530px;
         margin: 60px auto 0 auto;
     }
 
     .footer-list {
         flex-direction: column; /* garde tes cartes les unes sous les autres */
-        width: 100%;           /* occupe toute la largeur dispo */
+        width: 100%;
     }
 
     .footer-card {
-        width: 100%;            /* plus de largeur fixe */
-        max-width: none;        /* on enlève la limite */
+        width: 100%; /* plus de largeur fixe */
+        max-width: none;  /* on enlève la limite */
         padding-bottom: 10px;
     }
 
@@ -80,13 +67,41 @@ footer {
     }
 
     .footer-card h2 {
-        font-size: 18px;
         margin-left: 40px;
     }
 
     .footer-card a {
-        font-size: 12px;
         margin-left: 20px;
     }
+}
 
+/* La version mobile en dessous de 530px) */
+@media (max-width: 530px) {
+    footer {
+        width: 320px;
+    }
+
+    .footer-card h2 {
+        font-size: 18px;
+    }
+
+    .footer-card a {
+        font-size: 12px;
+    }
+}
+
+
+/* La version mobile entre 530px et 768px */
+@media (min-width: 530px) and (max-width: 768px) {
+    footer {
+        width: 530px;
+    }
+
+    .footer-card h2 {
+        font-size: 23px;
+    }
+
+    .footer-card a {
+        font-size: 17px;
+    }
 }

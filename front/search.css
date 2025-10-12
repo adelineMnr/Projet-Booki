@@ -140,37 +140,22 @@
 
 /****** Media queries ***********/
 
-
-/* Small devices (phones, less than 768px) */
+/* Toute la version mobile */
 @media (max-width: 768px) {
     #search {
         margin: 10px;
         padding-left: 10px;
-        width: fit-content;
         margin: 0 auto 0 auto;
-    }
-
-    #search h1 {
-        width: 300px;
-    }
-
-    #search p {
-        width: 270px;
-    }
-
-    #search h2 {
-        width: 300px;
     }
 
     .search-bars {
         margin-top: 10px;
         display: flex;
-        justify-content: center;
         text-align: center;
+        justify-content: flex-start;
     }
 
     .all-elements-search-bars {
-        width: fit-content;
         display: flex;
         position: relative;
     }
@@ -186,23 +171,10 @@
         border-bottom: 1px solid #F2F2F2;
         border-left: 1px solid #F2F2F2;
         border-right: none;
-        width: 15%;
-        max-width: 15px;
-        height: 15px;
-    }
-
-    .search-bars input {
-        max-width: 70%; /*largeur réduite de l’input*/
-        height: 47px;
-        font-size: clamp(0.9rem, 1.7vw, 1.3rem);
     }
 
     /* Sur mobile : bouton plus petit, icône visible, texte caché */
     .search-button {
-        width: 15%; /* Même hauteur que largeur pour un bouton carré */
-        height: 47px;
-        max-width: 50px;
-        min-width: 50px; /* Pour éviter que le bouton rétrécisse */
         border-radius: 15px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         position: absolute;
@@ -215,26 +187,9 @@
 
     .search-button .fa-solid.fa-magnifying-glass {
         display: inline; /* Affiche la loupe */
-        width: 17px;     /* Taille de l'icône */
+        width: 17px; /* Taille de l'icône */
         height: 17px;
         color: #ffffff;
-    }
-
-    .all-filter-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        width: fit-content;
-    }
-
-    .icon-filter {
-        width: 20px;
-        font-size: 18px;
-    }
-
-    .filter-button span {
-        font-size: clamp(0.9rem, 1.3vw, 1rem);
-        padding-left: 8px;
-        font-weight: bold;
     }
 
     .filters {
@@ -245,11 +200,66 @@
         margin-top: 10px;
     }
 
+
     .all-filter-buttons {
         display: grid;
         grid-template-columns: repeat(2, auto); /*2 colonnes automatiques*/
         justify-content: center; /*centre les colonnes dans la page*/
         gap: 10px; /*espace entre les boutons*/
+    }
+
+    .icon-filter {
+        width: 20px;
+    }
+
+    .filter-button span {
+        font-weight: bold;
+    }
+
+    .info {
+        margin: 30px 0 30px 0;
+    }
+}
+
+/* La version mobile en dessous de 530px) */
+@media (max-width: 530px) {
+    #search {
+        width: fit-content;
+    }
+
+    #search h1 {
+        width: 300px;
+    }
+
+    #search p {
+        width: 270px;
+    }
+
+    .all-elements-search-bars {
+        width: fit-content;
+    }
+
+    .fa-solid.fa-location-dot {
+        width: 15%;
+        max-width: 15px;
+        height: 15px;
+    }
+
+    .search-bars input {
+        max-width: 70%;
+        height: 47px;
+        font-size: clamp(0.9rem, 1.7vw, 1.3rem);
+    }
+
+    .search-button {
+        width: 15%; /* Même hauteur que largeur pour un bouton carré */
+        height: 47px;
+        max-width: 50px;
+        min-width: 50px; /* Pour éviter que le bouton rétrécisse */
+    }
+
+    .all-filter-buttons {
+        width: fit-content;
     }
 
     .filter-button {
@@ -260,7 +270,83 @@
         width: 135px;
     }
 
-    .info {
-        margin: 30px 0 30px 0;
+    .icon-filter {
+        font-size: 18px;
+    }
+
+    .filter-button span {
+        font-size: clamp(0.9rem, 1.3vw, 1rem);
+        padding-left: 8px;
+    }
+}
+
+/* La version mobile entre 530px et 768px */
+@media (min-width: 530px) and (max-width: 768px) {  
+    #search {
+        width: 520px;
+    }
+
+    #search h1 {
+        width: fit-content;
+        font-size: 25px;
+    }
+
+    #search p {
+        width: fit-content;
+        font-size: 17px;
+    }
+
+    .all-elements-search-bars {
+        width: 500px;
+    }
+
+     .fa-solid.fa-location-dot {
+        font-size: 23px;
+        width: 20%;
+        max-width: 28px;
+        height: 28px;
+    }
+
+    .search-bars input {
+        max-width: 85%;
+        width: 520px;
+        height: 60px;
+        font-size: clamp(1.3rem, 1.4vw, 1.4rem);
+    }
+
+    .search-button {
+        width: 20%; /* Même hauteur que largeur pour un bouton carré */
+        height: 60px;
+        max-width: 62px;
+        min-width: 62px; /* Pour éviter que le bouton rétrécisse */
+    }
+
+    .search-button .fa-solid.fa-magnifying-glass {
+        font-size: 19px;
+    }
+
+    #search h2 {
+        font-size: clamp(1.4rem, 1.4vw, 1.5rem);
+    }
+
+    .all-filter-buttons {
+        width: 520px;
+    }
+
+    .filter-button {
+        height: 65px;
+        padding: 8px;
+        border-radius: 28px;
+        width: 235px;
+    }
+
+    .icon-filter {
+        font-size: 26px;
+        padding-left: 15px;
+    }
+
+    .filter-button span {
+        font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+        padding-left: 25px;
     }
 }

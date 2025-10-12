@@ -157,7 +157,7 @@
 
 /****** Media queries ***********/
 
-/* Medium devices (tablets, less/equal than 1024px) */
+/* Toute la version tablette */
 @media (max-width: 1024px) {
     #lodging {
         flex-direction: column;
@@ -193,45 +193,29 @@
 }
 
 
-/* Small devices (phones, less than 768px) */
+/* Toute la version mobile */
 @media (max-width: 768px) {
     #lodging {
         flex-direction: column;
         margin: 0;
     }
 
-    /* Inverser l'ordre sur mobile */
     .lodging-container {
         order: 2; /* apparait après popular-container */
-        width: fit-content;
         margin: 0 auto 0 auto;
         padding: 0 1px 0 1px;
         border-radius: 0; 
         background-color: white;
     }
 
-    .lodging-container h2 {
-        font-size: 20px;
-        margin-top: 30px;
-    }
-
-    .popular-container {
-        order: 1; /* apparait avant lodging-container */
-        width: 320px; /* prend toute la largeur disponible */
-        padding: 0 1px 0 1px;
-        margin: 0 auto 0 auto;
-        box-sizing: border-box; /* inclut padding dans la largeur */
-        border-radius: 0; /* pour que ce soit flush avec le bord */
-    }
-
     /* Pour que les cards soient en colonne */
     .lodging-container .line {
         flex-direction: column;
-        width: fit-content;
     }
 
     .lodging-card {
-        width: 295px;
+        flex: none; 
+        max-width: none; /*enlève la limite du desktop*/
     }
 
     .lodging-card-infos {
@@ -243,26 +227,30 @@
 
     .lodging-card-infos h3 {
         margin: 10px 0 10px 15px;
-        font-size: clamp(0.9rem, 1.3vw, 1rem); /* min = 0.7rem, "fluide" = 1.3% largeur écran, max = 1rem */
     }
 
     .lodging-card-infos p {
         margin-left: 15px;
-        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
     }
 
     .lodging-card-infos span {
         margin: 0;
         font-weight: bold;
-        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
     }
 
     .lodging-card-infos .card-rating {
         margin: 5px 0px 10px 15px;
     }
 
+    .popular-container {
+        order: 1; /* apparait avant lodging-container */
+        padding: 0 1px 0 1px;
+        margin: 0 auto 0 auto;
+        box-sizing: border-box; /* inclut padding dans la largeur */
+        border-radius: 0; /* pour que ce soit flush avec le bord */
+    }
+
     .popular-container h2 {
-        font-size: 20px;
         padding: 15px 0 10px 10px;
     }
 
@@ -272,14 +260,10 @@
         padding: 20px 10px 0 0;
     }
 
-    .all-popular-card {
-        flex-direction: column;
-        width: fit-content;
-    }
-
     .popular-card {
-        width: 295px;
-        margin: 10px 10px 10px 10px;
+        margin: 10px;
+        flex: none; 
+        max-width: none; /*enlève la limite du desktop*/
     }
 
     .popular-card-infos {
@@ -309,5 +293,149 @@
 
     .popular-card-infos .card-rating {
         margin: auto 0 15px 10px; 
+    }
+}
+
+/* La version mobile en dessous de 530px) */
+@media (max-width: 530px) {
+    .lodging-container {
+        width: fit-content;
+    }
+
+    .lodging-container h2 {
+        margin-top: 20px;
+    }
+
+    .lodging-container .line {
+        width: fit-content;
+    }
+
+    .lodging-card {
+        width: 295px;
+    }
+
+    .lodging-card-infos h3 {
+        font-size: clamp(0.9rem, 1.3vw, 1rem); /* min = 0.7rem, "fluide" = 1.3% largeur écran, max = 1rem */
+    }
+
+    .lodging-card-infos p {
+        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+    }
+
+    .lodging-card-infos span {
+        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+    }
+
+    .popular-container {
+        width: 320px;
+    }
+
+    .popular-container h2 {
+        font-size: 20px;
+    }
+
+    .all-popular-card {
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .popular-card {
+        width: 295px;
+    }
+
+    .popular-card-infos h3 {
+        font-size: clamp(0.9rem, 1.3vw, 1rem); /* min = 0.7rem, "fluide" = 1.3% largeur écran, max = 1rem */
+    }
+
+    .popular-card-infos p {
+        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+    }
+
+    .popular-card-infos span {
+        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+    }
+}
+
+/* La version mobile entre 530px et 768px */
+@media (min-width: 530px) and (max-width: 768px) {
+    .lodging-container {
+        width: 530px;
+    }
+
+    .lodging-container h2 {
+        margin: 30px 0 0 20px;
+        font-size: 25px;
+    }
+
+    .lodging-container .line {
+        width: 530px;
+    }
+
+    .lodging-card {
+        width: 495px;
+        margin: 0 14px 0 12px;
+    }
+
+    .img-lodging {
+        height: 260px;
+    }
+
+    .lodging-card-infos h3 {
+        font-size: clamp(1.3rem, 1.3vw, 1.4rem); /* min = 0.7rem, "fluide" = 1.3% largeur écran, max = 1rem */
+    }
+
+    .lodging-card-infos p {
+        font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+    }
+
+    .lodging-card-infos span {
+        font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+    }
+
+    .lodging-card-infos .card-rating {
+        font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+    }
+
+    .lodging-link {
+        font-size: clamp(1.1rem, 1.1vw, 1.2rem);
+        margin: 20px;
+    }
+
+    .popular-container {
+        width: 530px;
+    }
+
+    .popular-container h2 {
+        font-size: 25px;
+    }
+
+    .all-popular-card {
+        flex-direction: column;
+        width: 530px;
+    }
+
+    .popular-card {
+        width: 505px;
+        height: 180px;
+    }
+
+    .img-popular {
+        height: 166px;
+    }
+
+    .popular-card-infos h3 {
+        font-size: clamp(1.3rem, 1.3vw, 1.4rem);
+    }
+
+    .popular-card-infos p {
+        font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+    }
+
+    .popular-card-infos span {
+        font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+    }
+
+    .popular-card-infos .card-rating {
+        font-size: clamp(1.2rem, 1.3vw, 1.3rem);
     }
 }

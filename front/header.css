@@ -36,7 +36,7 @@ header {
 
 /****** Media queries ***********/
 
-/* Small devices (phones, less than 768px) */
+/* Toute la version mobile */
 @media (max-width: 768px) {
     header {
         display: flex;
@@ -73,5 +73,12 @@ header {
         border-top: 3px solid transparent;
         border-bottom: 3px solid blue; /* Bordure en-dessous */
         color: blue;
+    }
+}
+
+/* La version mobile entre 530px et 768px */
+@media (min-width: 530px) and (max-width: 768px) {
+    .navigation-link {
+        font-size: 20px;
     }
 }
